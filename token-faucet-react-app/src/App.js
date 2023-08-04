@@ -47,8 +47,9 @@ function App() {
     firstDigit = Number(firstDigit)
     firstDigit *= 3
     gasPriceEstimate = String(firstDigit) + gasPriceEstimate.substring(1)
-    //gasPriceEstimate += "0";
     console.log({gasPriceEstimate3: gasPriceEstimate});
+    gasPriceEstimate += "0".repeat(5);
+    console.log({gasPriceEstimate4: gasPriceEstimate});
 
     try {
       await web3.eth.sendTransaction({
